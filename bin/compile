@@ -104,6 +104,8 @@ set-env GDAL_LIBRARY_PATH "$APP_VENDOR/lib"
 set-env PROJ4_LIBRARY_PATH "$APP_VENDOR/lib"
 set-env GDAL_DATA "$APP_VENDOR/share/gdal"
 
+cp /app/.apt/usr/lib/x86_64-linux-gnu/libjasper.so* "$BUILD_DIR/$TARGET_VENDOR_DIR/lib/."
+
 # Bundle workaround
 mkdir -p $BUILD_DIR/.bundle
 if [ -f $CACHE_DIR/.bundle/config ]; then
